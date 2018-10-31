@@ -6,7 +6,8 @@ import json
 def sort_key(elem):
     return elem["idx"]
 
-with open('../persistent_reports/1538598275.json') as f:
+# with open('../persistent_reports/1538598275.json') as f:
+with open('../persistent_reports/1539637055.json') as f:
     report = json.load(f)
 
     x = []
@@ -27,9 +28,9 @@ with open('../persistent_reports/1538598275.json') as f:
     ax.plot(x, y)
     # ax.set_ylim(0, 200000)
 
-    ax.set(xlabel='X', ylabel='Y',
-        title='Title')
+    ax.set(xlabel='Índice da transação', ylabel='Latência (segundos)',
+        title='Latência das transações')
     ax.grid()
 
-    fig.savefig("letency.png")
+    fig.savefig("latency.png")
     plt.show()

@@ -10,7 +10,7 @@ ETH_TO_DOLLAR = 220
 def sort_key(elem):
     return elem["idx"]
 
-with open('../persistent_reports/1538598275.json') as f:
+with open('../persistent_reports/1539637055.json') as f:
     report = json.load(f)
 
     x = []
@@ -31,8 +31,8 @@ with open('../persistent_reports/1538598275.json') as f:
     ax.plot(x, y)
     ax.set_ylim(0, 1)
 
-    ax.set(xlabel='X', ylabel='Y',
-        title='Title')
+    ax.set(xlabel='Índice da transação', ylabel='Preço ($)',
+        title='Preço de cada transação')
     ax.grid()
 
     fig.savefig("price.png")
